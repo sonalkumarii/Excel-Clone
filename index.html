@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- whole excel app will reside in this container class-->
+    <div class="container">
+        <div class="image">
+            <img src="google-sheets.png" height="10.5%", width="6%" />
+            <div class="title-bar" contenteditable="true" style="font-size: 25px;">Untitled</div>
+            <div class="menu-bar">
+                <p id="file">File
+
+                </p>
+                <p id="edit">Edit</p>
+                <p id="help">Help</p>
+            </div>
+        </div>
+        <div class="menu-options">
+            <div class="b-u-i">
+                <span class="material-icons" id="bold"> format_bold </span>
+                <span class="material-icons" id="italic"> format_italic </span>
+                <span class="material-icons" id="underline"> format_underlined </span>
+                <span class="material-icons" id="strikethrough">strikethrough_s</span>
+            </div>
+            <div class="font-style">
+                <select id="cell-font-family" onchange="changeFontStyle (this);">
+                    <option value="arial" style="font-family: 'arial'">Arial</option>
+                    <option value="'Caveat', cursive" style="font-family: 'Caveat', cursive;">Caveat</option>
+                    <option value="'Courier Prime', monospace" style="font-family:'Courier Prime', monospace ;">Courier Prime</option>
+                    <option value="'Gloria Hallelujah', cursive" style="font-family:'Gloria Hallelujah', cursive ;">Gloria Hallelujah</option>
+                    <option value="'Oswald', sans-serif" style="font-family:'Oswald', sans-serif ;">Oswald</option>
+                    <option value="'Peddana', serif" style="font-family: 'Peddana', serif;">Peddana</option>
+                    <option value="'Rubik', sans-serif" style="font-family:'Rubik', sans-serif ;">Rubik</option>
+                    <option value="'Yellowtail', cursive" style="font-family:'Yellowtail', cursive ;">Yellowtail</option>
+                    <option value="Monster" style="font-family:'Monster'">Monster</option>
+                    <option value="Times New Roman" style="font-family:'Times New Roman', Times, serif ;">Times New Roman</option>
+                </select>
+                <select id="cell-font-size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="24">22</option>
+                </select>
+            </div>
+            <div class="alignment">
+                <span class="material-icons"id="left"> format_align_left </span>
+                <span class="material-icons"id="center"> format_align_center </span>
+                <span class="material-icons" id="right"> format_align_right </span>
+            </div>
+            <div class="colors">
+                <span class="material-icons" id="fontColour"> format_color_text </span>
+                <span class="material-icons" id="backgroundColour"> format_color_fill </span>
+            </div>
+        </div>
+        <div class="formula-bar">
+            <input id="selected-cell-formula" readonly placeholder="Cell Address"/><input id="complete-formula" placeholder="Write Formula Here"/>
+        </div>
+        <div class="grid">
+            <div class="blank-corner"></div>
+            <div class="column-tags"></div>
+            <div class="row-numbers row-numbers-atke"></div>
+        </div>
+        <div class="sheet-bar">
+            <div>Sheet-1</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="styleScript.js"></script>
+    <script src="scrollScript.js"></script>
+
+</body>
+</html>
